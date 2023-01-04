@@ -1,0 +1,33 @@
+
+=======================================================================
+CONSTRUIR UNA FUNCION CAJA REGISTRADORA ( checkCashRegister )
+=======================================================================
+
+funcion caja registradora acepta tres argumentos:
+   -> Purchase price  ( price )
+   -> Payment como segundo argumento ( cash )
+   -> Cash-in-drawer dinero en caja ( cid ): 
+        => cid es un arreglo de dos dimensiones 2D que lista la moneda
+        disponible o sencillo debe ser para dar vuelto.
+
+    -> La funcion checkCashRegister deberá siempre retornar un objeto
+    con un status key y un change key:
+
+        => { status: "INSUFFICIENT_FUNDS", change: []} if cid < change OR 
+        if no se puede devolver el cambio exacto ( resto cero ).
+
+        => { status: "CLOSED", change: [...]} if cash-in-drawer = change.
+
+        => else { status: "OPEN", change [...]}, mostrando el change en orden 
+        de mayor a menor (eso mostrado  como el valor de change)
+
+    NOTA: los tipos de moneda unitaria son:
+            - Penny, $0.01 (PENNY)
+            - Nickel $0.05 (NICKEL)
+            - Dime $0.1 (DIME)
+            - Quarter $0.25 (QUARTER)
+            - Dollar $1 (ONE)
+            - Five Dollars $5 (FIVE)
+            - Ten Dollars $10 (TEN)
+            - Twenty Dollars $20 (TWENTY)
+            - One-hundred Dollars $100 (ONE HUNDRED)
